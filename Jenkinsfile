@@ -4,13 +4,13 @@ pipeline{
     stage('Build Application'){
     
                     steps{
-                         sh 'mvn clean package'
+                         sh 'mvn -f java-tomcat-sample/pom.xml clean package'
            }
              post{
                    success{
 
                      echo "Now Archiving Artifact...."
-                     archiveArtifacts artifacts '**/*.war'
+                     archiveArtifacts artifacts: '**/*.war'
                    }
               
              }     
