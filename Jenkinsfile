@@ -1,7 +1,7 @@
 pipeline{
  agent any
  Environment {
-         PKG_VERSION = 1.1.3
+         PKG_VERSION = '1.1.3'
  }
  stages{
     stage('Build'){
