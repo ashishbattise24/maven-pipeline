@@ -1,16 +1,19 @@
 pipeline{
  agent any
+ Environment {
+         PKG_VERSION = 1.1.3
+ }
  stages{
-    stage('Build Application'){
+    stage('Build'){
     
                     steps{
-                         sh 'mvn -f java-tomcat-sample/pom.xml clean package'
+                           echo "${PKG_VERSION}"
            }
+
              post{
                    success{
 
                      echo "Now Archiving Artifact...."
-                     archiveArtifacts artifacts: '**/*.war'
                    }
               
              }     
