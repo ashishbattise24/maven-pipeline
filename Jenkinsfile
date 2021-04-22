@@ -7,9 +7,14 @@ pipeline{
  stages{
     stage('Build'){
     
-                    steps{
-                           echo "${PKG_VERSION}"
-                           echo "${SERVER_CREDENTIAL}"
+                steps{
+                       echo "${PKG_VERSION}"
+                       withCredential([
+                        usernamePassword( credential: 'server-credential', usernameVariable: USER, passwordVariable: PWD)
+                        sh "Some script ${USER} ${PWD}"    
+                      ]){
+
+}
            }
 
              post{
