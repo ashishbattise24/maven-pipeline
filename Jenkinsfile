@@ -3,7 +3,7 @@ pipeline{
  
  parameters{
             choice(name: 'VERSION', choices: ['1.2.3', '1.2.4' ,'1.2.5'], description: 'Version choises' )
-            booleanParam(name: 'execValue, defaultValue: true, description: "Boolean parameter")
+            booleanParam(name: 'execValue, defaultValue: true, description: 'Boolean parameter')
  }
  stages{
     stage('Build'){
