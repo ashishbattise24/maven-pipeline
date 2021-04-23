@@ -8,7 +8,7 @@ pipeline{
     stage('Build'){
     
                 steps{
-                       echo "${PKG_VERSION}"
+                       echo "Choises"
                      }
  
  
