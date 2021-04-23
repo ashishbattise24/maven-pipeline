@@ -9,11 +9,6 @@ pipeline{
     
                 steps{
                        echo "${PKG_VERSION}"
-                       withCredential([
-                        usernamePassword( credential: 'server-credential', usernameVariable: USER, passwordVariable: PWD)
-                        sh "id ${USER}"    
-                      ]){
-
 }
            }
 
