@@ -9,19 +9,10 @@ pipeline{
     
                 steps{
                        echo "${PKG_VERSION}"
-}
-           }
-
-             post{
-                   success{
-
-                     echo "Now Archiving Artifact...."
-                   }
-              
-             }     
-
+                     }
  
-    }
- }
+ 
+                 }
 
+}
 }
