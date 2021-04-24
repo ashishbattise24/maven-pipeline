@@ -25,14 +25,12 @@ pipeline{
  
                  }
     stage('Prod'){
-                when {
-                        expression{
-                                   params.execValue
-                                  }
-                      }
                  steps{
-                         echo "This is prod steps"
-                          }
+
+                    scripts{
+                          gv.testApp()
+                            }
+                      }
                   }
  
 
