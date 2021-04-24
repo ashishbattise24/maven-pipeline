@@ -1,9 +1,9 @@
 def buildApp(){
 
-   echo "Building App"
+   echo "App Builded"
 }
 def testApp(){
 
-   echo "Testing app version ${params.VERSION}"
+   echo "App tested on Version ${params.VERSION}"
 }
 return this 	

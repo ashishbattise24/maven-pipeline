@@ -24,10 +24,11 @@ pipeline{
                     }
  
                  }
-    stage('Prod'){
+    stage('Test'){
                  steps{
 
-                    scripts{
+                    script{
+                          echo "Testing an App"
                           gv.testApp()
                             }
                       }
