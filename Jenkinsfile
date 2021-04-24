@@ -15,15 +15,16 @@ pipeline{
  
                  }
     stage('Prod'){
+                when {
+                        expression{
+                                   params.execValue
+                                  }
+                      }
                  steps{
-                     when {
-                         expression{
-                                 params.execValue
-                                   }
+                         echo "This is prod steps"
                           }
-                     }
+                  }
  
-                 }
 
 }
 }
