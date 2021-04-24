@@ -9,17 +9,19 @@ pipeline{
  stages{
     stage('Init'){
               steps{
+                 script{
                   gv = load "buildapp.groovy"
+                       }
                    }
- 
     }
     stage('Build'){
     
                 steps{
+                    script{
                        echo "Building an Application"
                        gv.buildApp()
-                     }
- 
+                          }
+                    }
  
                  }
     stage('Prod'){
