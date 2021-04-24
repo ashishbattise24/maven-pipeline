@@ -2,4 +2,8 @@ def buildApp(){
 
    echo "Building App"
 }
-return this 
+def testApp(){
+
+   echo "Testing app version ${params.VERSION}"
+}
+return this 	
